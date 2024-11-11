@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Header from '../components/Header'; // Importa el Header
 import '../styles/ReservationPage.css';
 
 function ReservationPage() {
@@ -43,6 +43,7 @@ function ReservationPage() {
 
   return (
     <div className="reservation-container">
+      <Header />
       <h2 className="reservation-title">Reserva gimnasio III usm</h2>
       <table className="calendar-table">
         <thead>

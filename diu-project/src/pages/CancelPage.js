@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from '../components/Header'; // Importa el Header
 import '../styles/CancelPage.css';
 
 const CancelPage = () => {
@@ -19,7 +20,8 @@ const CancelPage = () => {
 
   return (
     <div className="cancel-container">
-      <h2>Tus Reservas</h2>
+      <Header />
+      <h2>Tus Reservas Gimnasio USM</h2>
       {reservations.length > 0 ? (
         reservations.map((reservation, index) => (
           <div key={index} className="reservation-item">
