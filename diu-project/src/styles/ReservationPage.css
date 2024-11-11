@@ -39,18 +39,18 @@
   border: 1px rgb(113, 113, 113) solid;
 
 }
-
+/*f4c542*/
 .calendar-table th {
-  background-color: #f4c542;
+  background-color: #ffb300;
   color: #333;
 }
 
 .block {
-  background-color: white;
-  color: black;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   position: relative;
+  font-weight: 20;
 }
 
 .block .default-text {
@@ -69,7 +69,7 @@
 
 .block.available::after {
   content: "Cupos " attr(data-capacity); /* Incluye "Cupos" antes de la capacidad */
-  font-size: 13px;
+  font-size: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,10 +77,12 @@
   opacity: 0;
   transition: opacity 0.3s;
   color: white;
+  font-weight: bold;
 }
 
 .block.available:hover::after {
   opacity: 1; /* Muestra el texto de cupos en el hover */
+
 }
 
 .block.selected {

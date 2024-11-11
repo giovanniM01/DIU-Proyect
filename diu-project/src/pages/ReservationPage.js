@@ -34,10 +34,13 @@ function ReservationPage() {
   };
 
   const saveReservations = () => {
-    localStorage.setItem('reservations', JSON.stringify(selectedBlocks));
-    alert(`Has reservado: ${selectedBlocks.join(', ')}`);
+    if (selectedBlocks.length === 0) {
+      alert('No has seleccionado ningún bloque para reservar.');
+    } else {
+      localStorage.setItem('reservations', JSON.stringify(selectedBlocks));
+      alert(`Has reservado: ${selectedBlocks.join(', ')}`);
+    }
   };
-  
 
   const isBlockSelected = (block) => selectedBlocks.includes(block);
 
@@ -57,7 +60,7 @@ function ReservationPage() {
         <tbody>
           {blocks.map((time) => (
             <tr key={time}>
-              <td className="hour-cell">{time}</td> {/* Añadir clase hour-cell */}
+              <td className="hour-cell">{time}</td>
               {days.map((day) => {
                 const blockId = `${day} ${time}`;
                 return (
@@ -82,7 +85,6 @@ function ReservationPage() {
       <button className="agendar-button" onClick={saveReservations}>
         Agendar
       </button>
-
     </div>
   );
 }
