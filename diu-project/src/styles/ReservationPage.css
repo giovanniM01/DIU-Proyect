@@ -1,0 +1,106 @@
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7aefff, #cb8b00); /* Fondo de gradiente */
+}
+
+.reservation-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.calendar-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+}
+
+/* Resto del estilo permanece igual */
+.calendar-table th,
+.calendar-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.calendar-table th {
+  background-color: #f4c542;
+  color: #333;
+}
+
+.block {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+}
+
+.block .default-text {
+  display: block;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.block.available:hover{
+  background: rgb(169, 203, 156);
+}
+
+.block.available:hover .default-text {
+  opacity: 0; /* Oculta "Disponible" al hacer hover */
+}
+
+.block.available::after {
+  content: "Cupos " attr(data-capacity); /* Incluye "Cupos" antes de la capacidad */
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: black;
+}
+
+.block.available:hover::after {
+  opacity: 1; /* Muestra el texto de cupos en el hover */
+}
+
+.block.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.block.selected::after {
+  font-size: 14px;
+  color: white;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.agendar-button {
+  margin-top: 10px;
+  padding: 15px 40px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  width: 200px;
+}
+
+.agendar-button:hover{
+  background: #00ff08;
+}

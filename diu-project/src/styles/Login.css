@@ -1,0 +1,79 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(780deg, #0f0f0f, #002e5f); /* Fondo degradado */
+  color: white;
+  position: relative;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logoUSM {
+  width: 110px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.welcomeText {
+  font-size: 38px;
+  color: #ffffff;
+}
+
+.titleContainer {
+  font-size: 44px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.inputContainer > .errorLabel {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.inputBox {
+  height: 48px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.inputButton {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  background: cornflowerblue;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.inputButton:hover {
+  background: #3b5998;
+}
