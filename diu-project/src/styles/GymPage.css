@@ -1,0 +1,23 @@
+.gym-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .gym-button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 8px;
+  }
+  
+  .gym-button:hover {
+    background-color: #45a049;
+  }
+  

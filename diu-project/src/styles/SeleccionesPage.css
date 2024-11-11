@@ -1,0 +1,33 @@
+/* src/pages/SeleccionesPage.css */
+.selecciones-page {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(780deg, #0f0f0f, #002e5f);
+}
+
+.deportes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px; /* Ancho máximo para centrar el contenido */
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+h2 {
+  color: white;
+  font-size: 34px;
+  
+}
+
+.intro-text {
+  border: #ff9900 1px  solid;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 18px;
+  color: #000000;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
