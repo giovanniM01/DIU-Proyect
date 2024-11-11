@@ -10,12 +10,11 @@ function ReservationPage() {
   ];
   const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
-  // Genera una capacidad aleatoria entre 0 y 14 para cada bloque al cargar la página
   useEffect(() => {
     const capacities = {};
     days.forEach((day) => {
       blocks.forEach((time) => {
-        capacities[`${day} ${time}`] = Math.floor(Math.random() * 15)+1;
+        capacities[`${day} ${time}`] = Math.floor(Math.random() * 15) + 1;
       });
     });
     setBlockCapacities(capacities);
@@ -50,7 +49,7 @@ function ReservationPage() {
         <tbody>
           {blocks.map((time) => (
             <tr key={time}>
-              <td>{time}</td>
+              <td className="hour-cell">{time}</td> {/* Añadir clase hour-cell */}
               {days.map((day) => {
                 const blockId = `${day} ${time}`;
                 return (

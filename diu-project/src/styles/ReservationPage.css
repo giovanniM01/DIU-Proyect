@@ -4,21 +4,27 @@
   align-items: center;
   padding: 20px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #7aefff, #cb8b00); /* Fondo de gradiente */
+  background: linear-gradient(780deg, #0f0f0f, #002e5f);
 }
 
 .reservation-title {
   font-size: 24px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .calendar-table {
   width: 100%;
   max-width: 900px;
   border-collapse: collapse;
+
 }
 
-/* Resto del estilo permanece igual */
+/* Estilo de la columna de horas */
+.hour-cell {
+  color: white;
+  font-weight: bold;
+}
 .calendar-table th,
 .calendar-table td {
   border: 1px solid #ddd;
@@ -29,6 +35,8 @@
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  border: 1px rgb(113, 113, 113) solid;
+
 }
 
 .calendar-table th {
@@ -50,8 +58,8 @@
   transition: opacity 0.3s;
 }
 
-.block.available:hover{
-  background: rgb(169, 203, 156);
+.block.available:hover {
+  background: #4caf50;
 }
 
 .block.available:hover .default-text {
@@ -88,6 +96,7 @@
   margin-top: 20px;
   font-size: 16px;
   text-align: center;
+  color: white;
 }
 
 .agendar-button {
@@ -101,6 +110,6 @@
   width: 200px;
 }
 
-.agendar-button:hover{
+.agendar-button:hover {
   background: #00ff08;
 }
