@@ -33,6 +33,12 @@ function ReservationPage() {
     }
   };
 
+  const saveReservations = () => {
+    localStorage.setItem('reservations', JSON.stringify(selectedBlocks));
+    alert(`Has reservado: ${selectedBlocks.join(', ')}`);
+  };
+  
+
   const isBlockSelected = (block) => selectedBlocks.includes(block);
 
   return (
@@ -72,9 +78,10 @@ function ReservationPage() {
         <p>Selecciona tu bloque (max 2)</p>
         <p>Haz clic en agendar</p>
       </div>
-      <button className="agendar-button" onClick={() => alert(`Has reservado: ${selectedBlocks.join(', ')}`)}>
+      <button className="agendar-button" onClick={saveReservations}>
         Agendar
       </button>
+
     </div>
   );
 }

@@ -23,7 +23,7 @@ const Login = () => {
       setEmailError('El correo es obligatorio');
       isValid = false;
     } else if (!validateEmail(email)) {
-      setEmailError('Ingrese un correo válido');
+      setEmailError('Ingrese un correo válido nombre@usm.cl');
       isValid = false;
     } else {
       setEmailError('');

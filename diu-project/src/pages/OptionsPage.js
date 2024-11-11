@@ -8,7 +8,7 @@ const OptionsPage = () => {
   return (
     <div className="options-container">
       <h2>Opciones</h2>
-      <button onClick={() => navigate('/gym')} className="option-button">Gimnasio</button>
+      <button onClick={() => navigate('/gym-options')} className="option-button">Gimnasio</button>
       <button onClick={() => navigate('/selecciones')} className="option-button">Seleccionados</button>
       <button onClick={() => navigate('/talleres')} className="option-button">Talleres</button>
     </div>
