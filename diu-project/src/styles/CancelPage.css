@@ -35,6 +35,7 @@
   margin: 8px 0;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  font-weight: bold;
 }
 
 .cancel-button {
@@ -46,6 +47,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
+  font-weight: bold;
 }
 
 .cancel-button:hover {
