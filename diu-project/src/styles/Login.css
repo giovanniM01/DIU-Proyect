@@ -65,15 +65,16 @@
   width: 100%;
   max-width: 400px;
   border: none;
-  background: cornflowerblue;
+  background: rgb(70, 108, 180);
   color: white;
   padding: 12px 24px;
   font-size: 18px;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
+  font-weight: bold;
 }
 
 .inputButton:hover {
-  background: #3b5998;
+  background: #0051ff;
 }

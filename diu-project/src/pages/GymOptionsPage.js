@@ -10,9 +10,9 @@ const GymOptionsPage = () => {
     
     <div className="gym-options-container">
       <Header/>
-      <h2>Gimnasio - Opciones</h2>
-      <button onClick={() => navigate('/reservation')} className="gym-option-button">Reservar</button>
-      <button onClick={() => navigate('/cancel')} className="gym-option-button">Cancelar</button>
+      <h2>Gimnasio USM</h2>
+      <button onClick={() => navigate('/reservation')} className="gym-option-button">Reservar bloque</button>
+      <button onClick={() => navigate('/cancel')} className="gym-option-button">Cancelar reserva</button>
     </div>
   );
 };

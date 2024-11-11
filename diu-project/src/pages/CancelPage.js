@@ -30,7 +30,7 @@ const CancelPage = () => {
           </div>
         ))
       ) : (
-        <p>No tienes reservas actuales.</p>
+        <p className='no-reservas-msj'>* No tienes reservas actuales *</p>
       )}
     </div>
   );
