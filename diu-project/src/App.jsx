@@ -1,3 +1,4 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
@@ -7,6 +8,7 @@ import CancelPage from './pages/CancelPage';
 import GymOptionsPage from './pages/GymOptionsPage';
 import SeleccionesPage from './pages/SeleccionesPage';
 import TalleresPage from './pages/TalleresPage';
+import DeporteDetailPage from './pages/DeporteDetailPage';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/cancel" element={<CancelPage />} />
         <Route path="/selecciones" element={<SeleccionesPage />} />
         <Route path="/talleres" element={<TalleresPage />} />
+        <Route path="/deportes/:deporteId" element={<DeporteDetailPage />} />
       </Routes>
     </Router>
   );

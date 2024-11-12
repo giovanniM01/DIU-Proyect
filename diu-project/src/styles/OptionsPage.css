@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+.areas {
+  color: rgb(255, 255, 255);
+}
+
 .option-button {
   width: 100%;
   max-width: 400px;
