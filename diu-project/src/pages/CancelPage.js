@@ -1,39 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header'; // Importa el Header
+import Header from '../components/Header';
 import '../styles/CancelPage.css';
 
-const CancelPage = () => {
-  const [reservations, setReservations] = useState([]);
+function CancelPage() {
+  const [reservedBlocks, setReservedBlocks] = useState([]);
 
   useEffect(() => {
     const savedReservations = JSON.parse(localStorage.getItem('reservations')) || [];
-    setReservations(savedReservations);
+    setReservedBlocks(savedReservations);
   }, []);
 
-  const handleCancel = (reservation) => {
-    if (window.confirm(`¿Estás seguro de que deseas cancelar la reserva: ${reservation}?`)) {
-      const updatedReservations = reservations.filter((res) => res !== reservation);
-      setReservations(updatedReservations);
-      localStorage.setItem('reservations', JSON.stringify(updatedReservations));
-    }
+  const cancelReservation = (block) => {
+    const updatedReservations = reservedBlocks.filter((b) => b !== block);
+    setReservedBlocks(updatedReservations);
+    localStorage.setItem('reservations', JSON.stringify(updatedReservations));
+    alert(`La reserva para el bloque ${block} ha sido cancelada.`);
   };
 
   return (
     <div className="cancel-container">
       <Header />
-      <h2>Tus Reservas Gimnasio USM</h2>
-      {reservations.length > 0 ? (
-        reservations.map((reservation, index) => (
-          <div key={index} className="reservation-item">
-            <span>{reservation}</span>
-            <button className="cancel-button" onClick={() => handleCancel(reservation)}>Cancelar</button>
-          </div>
-        ))
-      ) : (
-        <p className='no-reservas-msj'>* No tienes reservas actuales *</p>
-      )}
+      <h2 className="cancel-title">Cancelar Reservas</h2>
+      <div className="reservations-list">
+        {reservedBlocks.length > 0 ? (
+          reservedBlocks.map((block, index) => (
+            <div key={index} className="reservation-item">
+              <span>{block}</span>
+              <button onClick={() => cancelReservation(block)} className="cancel-button">
+                Cancelar
+              </button>
+            </div>
+          ))
+        ) : (
+          <p>No tienes reservas actuales.</p>
+        )}
+      </div>
     </div>
   );
-};
+}
 
 export default CancelPage;

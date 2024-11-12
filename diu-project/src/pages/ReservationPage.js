@@ -4,6 +4,7 @@ import '../styles/ReservationPage.css';
 
 function ReservationPage() {
   const [selectedBlocks, setSelectedBlocks] = useState([]);
+  const [reservedBlocks, setReservedBlocks] = useState([]);
   const [blockCapacities, setBlockCapacities] = useState({});
   const blocks = [
     '09:40 - 10:50', '11:05 - 12:15', '12:30 - 13:40', '14:40 - 15:50',
@@ -19,16 +20,26 @@ function ReservationPage() {
       });
     });
     setBlockCapacities(capacities);
+
+    // Cargar reservas desde localStorage al iniciar la página
+    const savedReservations = JSON.parse(localStorage.getItem('reservations')) || [];
+    setReservedBlocks(savedReservations);
   }, []);
 
   const handleBlockClick = (block) => {
+    if (reservedBlocks.includes(block)) {
+      // Si el bloque ya está reservado, no hacer nada
+      return;
+    }
+
+    // Alternar selección de bloques, respetando el límite de 2 reservas en total
     if (selectedBlocks.includes(block)) {
       setSelectedBlocks(selectedBlocks.filter((b) => b !== block));
     } else {
-      if (selectedBlocks.length < 2) {
+      if (selectedBlocks.length + reservedBlocks.length < 2) {
         setSelectedBlocks([...selectedBlocks, block]);
       } else {
-        alert('Solo puedes seleccionar hasta 2 bloques.');
+        alert('Solo puedes reservar hasta 2 bloques en total.');
       }
     }
   };
@@ -37,12 +48,16 @@ function ReservationPage() {
     if (selectedBlocks.length === 0) {
       alert('No has seleccionado ningún bloque para reservar.');
     } else {
-      localStorage.setItem('reservations', JSON.stringify(selectedBlocks));
+      const newReservations = [...reservedBlocks, ...selectedBlocks];
+      setReservedBlocks(newReservations);
+      localStorage.setItem('reservations', JSON.stringify(newReservations));
       alert(`Has reservado: ${selectedBlocks.join(', ')}`);
+      setSelectedBlocks([]); // Limpiar los bloques seleccionados después de reservar
     }
   };
 
   const isBlockSelected = (block) => selectedBlocks.includes(block);
+  const isBlockReserved = (block) => reservedBlocks.includes(block);
 
   return (
     <div className="reservation-container">
@@ -66,11 +81,23 @@ function ReservationPage() {
                 return (
                   <td
                     key={blockId}
-                    className={`block ${isBlockSelected(blockId) ? 'selected' : 'available'}`}
+                    className={`block ${
+                      isBlockReserved(blockId)
+                        ? 'reserved'
+                        : isBlockSelected(blockId)
+                        ? 'selected'
+                        : 'available'
+                    }`}
                     onClick={() => handleBlockClick(blockId)}
                     data-capacity={`${blockCapacities[blockId]}/15`}
                   >
-                    <span className="default-text">{isBlockSelected(blockId) ? 'Seleccionado' : 'Disponible'}</span>
+                    <span className="default-text">
+                      {isBlockReserved(blockId)
+                        ? 'Reservado'
+                        : isBlockSelected(blockId)
+                        ? 'Seleccionado'
+                        : 'Disponible'}
+                    </span>
                   </td>
                 );
               })}
@@ -79,7 +106,7 @@ function ReservationPage() {
         </tbody>
       </table>
       <div className="instructions">
-        <p>Selecciona tu bloque (max 2)</p>
+        <p>Selecciona tu bloque (max 2 en total)</p>
         <p>Haz clic en agendar</p>
       </div>
       <button className="agendar-button" onClick={saveReservations}>

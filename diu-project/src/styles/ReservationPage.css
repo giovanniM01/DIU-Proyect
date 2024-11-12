@@ -119,3 +119,11 @@
 .agendar-button:hover {
   background: #0004ff;
 }
+
+
+.block.reserved {
+  background-color: #0004ff; /* Color para los bloques reservados */
+  color: white;
+  cursor: not-allowed;
+  font-weight: bold;
+}
