@@ -1,4 +1,4 @@
-// src/components/DeporteCard.js
+// src/components/DeporteCard.jsx
 import React from 'react';
 import './DeporteCard.css';
 
