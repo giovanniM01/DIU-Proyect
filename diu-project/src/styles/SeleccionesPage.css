@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 900px; /* Ancho máximo para centrar el contenido */
+  max-width: 900px; 
   margin: 0 auto; /* Centra el contenedor en la página */
   
 }

@@ -122,7 +122,7 @@
 
 
 .block.reserved {
-  background-color: #0004ff; /* Color para los bloques reservados */
+  background-color: #0004ff; /* Color para los bloques reservados y hover*/
   color: white;
   cursor: not-allowed;
   font-weight: bold;
