@@ -1,6 +1,7 @@
 // src/pages/SeleccionesPage.js
 import React from 'react';
 import DeporteCard from '../components/DeporteCard';
+import BackButton from '../components/BackButton';
 import Header from '../components/Header';
 import '../styles/SeleccionesPage.css';
 
@@ -24,6 +25,7 @@ const SeleccionesPage = () => {
   return (
     <div className="selecciones-page">
       <Header />
+      <BackButton />
       <h2>Selecciones Deportivas</h2>
       <p className="intro-text">
         El Área de Deporte del DEFIDER es la encargada de planificar, coordinar, ejecutar y evaluar las selecciones deportivas,

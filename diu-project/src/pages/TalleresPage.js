@@ -1,4 +1,5 @@
 import React from 'react';
+import BackButton from '../components/BackButton';
 import Header from '../components/Header'; // Importa el Header
 import '../styles/TalleresPage.css';
 
@@ -226,6 +227,7 @@ const TalleresPage = () => {
   return (
     <div className="talleres-container">
       <Header/>
+      <BackButton />
       {talleres.map((categoria, index) => (
         <div key={index} className="categoria-section">
           <h2 className="categoria-titulo">{categoria.categoria}</h2>

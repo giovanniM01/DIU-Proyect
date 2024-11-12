@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BackButton from '../components/BackButton';
 import Header from '../components/Header';
 import '../styles/CancelPage.css';
 
@@ -20,6 +21,7 @@ function CancelPage() {
   return (
     <div className="cancel-container">
       <Header />
+      <BackButton />
       <h2 className="cancel-title">Cancelar Reservas</h2>
       <div className="reservations-list">
         {reservedBlocks.length > 0 ? (
