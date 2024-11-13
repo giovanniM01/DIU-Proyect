@@ -1,0 +1,132 @@
+
+.talleres-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(780deg, #0f0f0f, #002e5f);
+  color: white;
+  min-height: 100vh;
+}
+
+.categoria-section {
+  margin-top: 80px;
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 5px;
+}
+
+.categoria-titulo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.categoria-descripcion {
+  font-size: 17px;
+  color: #c6c6c6;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.talleres-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.taller-item {
+  width: 180px;
+  height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.taller-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /*  */
+  z-index: 1;
+}
+
+.taller-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff; 
+  font-size: 12px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+.taller-item:hover .taller-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.taller-nombre {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  color: #ffffff; /* Texto en blanco */
+  position: relative;
+  z-index: 2;
+}
+
+.taller-campus {
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff; /* Texto en blanco */
+  position: relative;
+  z-index: 2;
+}
+
+/* Clases de fondo específicas para cada actividad */
+.ajedrez { background-image: url('../images/ajedrez.jpg'); }
+.tenisdemesa { background-image: url('../images/tenismesa.jpg'); }
+.tenis { background-image: url('../images/tenis.jpg'); }
+.basquetbol { background-image: url('../images/basquetbol.jpg'); }
+.basquetbol3x3 { background-image: url('../images/basquetbol3x3.jpeg'); }
+.futbol { background-image: url('../images/futbol.jpg'); }
+.karate { background-image: url('../images/karate.jpg'); }
+.futsal { background-image: url('../images/futsal1.png'); }
+.gimnasiaartistica { background-image: url('../images/gimnasiaartistica.jpg'); }
+.judo { background-image: url('../images/judo.jpg'); }
+.running { background-image: url('../images/running.jpg'); }
+.balonmano { background-image: url('../images/balonmanos.jpg'); }
+.taekwondo { background-image: url('../images/taekwondo.jpg'); }
+.voleibolplaya { background-image: url('../images/voleiplaya.jpg'); }
+.ultimatefrisbee { background-image: url('../images/frisbee.jpg'); }
+.entrenamientofuncional { background-image: url('../images/entrenamientofuncional.jpg'); }
+.gap { background-image: url('../images/gapde.jpg'); }
+.pilates { background-image: url('../images/pilates.jpg'); }
+.trx { background-image: url('../images/trx.jpg'); }
+.yoga { background-image: url('../images/yoga.jpg'); }
+.spinning { background-image: url('../images/spinninga.jpg'); }
+.danzacontemporanea { background-image: url('../images/danzacomtemp.jpg'); }
+.danza { background-image: url('../images/danza.jpg'); }
+.folclor { background-image: url('../images/folclor.jpg'); }
+.teatro { background-image: url('../images/teatro.jpg'); }
+.salsa { background-image: url('../images/salsaimagenes.jpg'); }

@@ -1,0 +1,52 @@
+/* src/styles/DeporteCard.css */
+
+.deporte-card {
+  border-radius: 8px;
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
+}
+
+.deporte-card h3, .deporte-card p {
+  margin: 0;
+  z-index: 1;
+  color: white;
+}
+
+.deporte-card .categoria {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.deporte-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 0;
+}
+
+.deporte-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,19 @@
+.headerContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .logoUSM {
+    width: 110px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .welcomeText {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  

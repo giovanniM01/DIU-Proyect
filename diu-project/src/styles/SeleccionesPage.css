@@ -1,0 +1,31 @@
+/* src/pages/SeleccionesPage.css */
+.selecciones-page {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(780deg, #0f0f0f, #002e5f);
+  width: 100%;
+}
+
+.deportes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px; 
+  margin: 0 auto; /* Centra el contenedor en la página */
+  
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 34px;
+}
+
+.intro-text {
+  padding: 5px;
+  font-size: 18px;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}

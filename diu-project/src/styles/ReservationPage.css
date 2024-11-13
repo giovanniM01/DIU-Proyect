@@ -1,0 +1,129 @@
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(780deg, #0f0f0f, #002e5f);
+}
+
+.reservation-title {
+  margin-top: 70px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.calendar-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+
+}
+
+/* Estilo de la columna de horas */
+.hour-cell {
+  color: white;
+  font-weight: bold;
+}
+.calendar-table th,
+.calendar-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px rgb(113, 113, 113) solid;
+
+}
+/*f4c542*/
+.calendar-table th {
+  background-color: #ffb300;
+  color: #333;
+}
+
+.block {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative;
+  font-weight: 20;
+}
+
+.block .default-text {
+  display: block;
+  font-size: 16px;
+  transition: opacity 0.3s;
+}
+
+.block.available:hover {
+  background: rgb(70, 108, 180);
+}
+
+.block.available:hover .default-text {
+  opacity: 0; /* Oculta "Disponible" al hacer hover */
+}
+
+.block.available::after {
+  content: "Cupos " attr(data-capacity); /* Incluye "Cupos" antes de la capacidad */
+  font-size: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+  font-weight: bold;
+}
+
+.block.available:hover::after {
+  opacity: 1; /* Muestra el texto de cupos en el hover */
+
+}
+
+.block.selected {
+  background-color: #0004ff;
+  color: white;
+}
+
+.block.selected::after {
+  font-size: 14px;
+  color: white;
+}
+
+.instructions {
+  margin-top: 8px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+
+.agendar-button {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  background: rgb(70, 108, 180);
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.agendar-button:hover {
+  background: #0004ff;
+}
+
+
+.block.reserved {
+  background-color: #0004ff; /* Color para los bloques reservados y hover*/
+  color: white;
+  cursor: not-allowed;
+  font-weight: bold;
+}
