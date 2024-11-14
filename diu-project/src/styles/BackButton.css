@@ -1,0 +1,18 @@
+/* src/styles/BackButton.css */
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 54px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .back-button:hover {
+    color: #ffb300; /* Cambia el color al pasar el mouse */
+  }
+  
