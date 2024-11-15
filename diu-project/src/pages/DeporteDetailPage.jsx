@@ -26,7 +26,7 @@ const DeporteDetailPage = () => {
       <ul>
         {deporte.categorias?.map((categoria, index) => (
           <li key={index}>{categoria}</li>
-        ))}*x
+        ))}
       </ul>
       <h3>Campus y Profesores</h3>
       {deporte.campus?.map((campus, index) => (
