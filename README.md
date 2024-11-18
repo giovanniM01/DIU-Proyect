@@ -1,4 +1,4 @@
-# DEFIDER - Sistema de Reservas y Talleres Deportivos
+# DEFIDER - Servicios
 
 Este proyecto es una aplicación web desarrollada en React para el sistema de reservas y visualización de talleres del DEFIDER en la Universidad Técnica Federico Santa María. El objetivo de la aplicación es permitir a los usuarios reservar bloques de tiempo en el gimnasio, así como explorar y conocer los diferentes talleres deportivos, fitness, artísticos y culturales que ofrece la universidad.
 
